@@ -1,0 +1,55 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 3fr 10fr;
+  gap: 1rem;
+}
+
+.dialogs_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-right: 2px solid rgba(0,0,0, .1);
+  padding-right: 1rem;
+}
+
+.dialogs_messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dialogs_items {
+  max-height: calc(100vh - (100px + 1rem + 4rem));
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  padding-right: 2rem;
+}
+
+.dialogs_input {
+  display: flex;
+  width: 100%;
+  gap:  1rem;
+  align-items: flex-start;
+  justify-content: end;
+}
+
+.dialogs_input textarea {
+  flex: 1 1 auto;
+  outline: none;
+  resize: none;
+  min-width: 200px;
+  font-size: 1rem;
+  padding: .8em;
+  border-radius: 1rem;
+  border: none;
+}
+
+.dialogs_input button {
+  padding: 0 1rem;
+  align-self: stretch;
+}

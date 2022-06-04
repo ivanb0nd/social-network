@@ -1,0 +1,38 @@
+.dialog a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  padding: .5rem .75rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.dialog a.active {
+  color: rgb(238, 78, 78);
+  background-color: rgb(212, 212, 212);
+}
+
+.dialog a:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+.dialog_avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.dialog_avatar img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dialog_name {
+  font-size: 1.3rem;
+}

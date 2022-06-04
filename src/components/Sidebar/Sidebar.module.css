@@ -1,0 +1,15 @@
+.sidebar {
+  grid-area: sidebar;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  /* background-color: rgb(226, 226, 226); */
+  
+}
+
+.menu {
+  background-color: rgb(238, 238, 238);
+  border-radius: 1em;
+  padding: 1rem 0;
+  position: sticky;
+  top: 20px;
+}

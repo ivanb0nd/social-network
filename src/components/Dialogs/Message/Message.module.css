@@ -1,0 +1,32 @@
+.message {
+  position: relative;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.message.interlocutor {
+  align-self: flex-start;
+}
+
+.message.interlocutor .message_sender {
+  position: absolute;
+  top: -25px;
+  left: 1rem;
+}
+
+.message.you .message_sender {
+  position: absolute;
+  top: -25px;
+  right: 1rem;
+}
+
+.message.you {
+  align-self: flex-end;
+}
+
+/* .message:last-child {
+  margin: 0;
+} */
+

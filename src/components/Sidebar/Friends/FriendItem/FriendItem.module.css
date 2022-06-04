@@ -1,0 +1,33 @@
+.friend {
+  list-style: none;
+}
+
+.friend a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+}
+
+.friend a:hover {
+  text-decoration: underline;
+}
+
+.friend_avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.friend_avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.friend_name {
+  color: black;
+  font-size: .9rem;
+}

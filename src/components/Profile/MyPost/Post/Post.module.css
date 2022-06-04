@@ -1,0 +1,34 @@
+.likes_count {
+  font-weight: bold;
+  margin-left: .3rem;
+}
+
+.likes_section {
+  display: flex;
+  justify-content: end;
+}
+
+.likes_button {
+  margin-left: .5rem;
+}
+
+.post {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 3px 7px 1px rgba(0,0,0, .2);
+}
+
+.post_info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.post_info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}

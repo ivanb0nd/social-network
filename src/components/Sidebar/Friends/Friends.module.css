@@ -1,0 +1,14 @@
+.friends {
+
+}
+
+.friends_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: 1fr;
+  gap: .5rem;
+  padding: 0 10px;
+  margin: 0;
+}
+
+
