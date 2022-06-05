@@ -4,12 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import store from './redux/store';
+import store from './redux/redux-store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function rerenderEntireTree(state) {
+
   root.render(
     <React.StrictMode>
       <BrowserRouter>
@@ -19,8 +20,12 @@ function rerenderEntireTree(state) {
   );
 }
 
-rerenderEntireTree(store.getState);
-store.subscribe(rerenderEntireTree);
+rerenderEntireTree(store.getState());
+
+store.subscribe(() => {
+  let state = store.getState();
+  rerenderEntireTree(state);
+});
 
 
 
