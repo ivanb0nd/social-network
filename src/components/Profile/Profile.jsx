@@ -2,7 +2,7 @@ import classes from './Profile.module.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 import MyPostsContainer from './MyPost/MyPostsContainer';
 
-function Profile(props) {
+function Profile() {
   return (
     <div>
       <div className={classes.image}>
