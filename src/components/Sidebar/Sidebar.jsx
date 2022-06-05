@@ -1,13 +1,13 @@
 import classes from './Sidebar.module.css'
 import Navigation from './Navigation/Navigation';
-import Friends from './Friends/Friends'
+import FriendsContainer from './Friends/FriendsContainer';
 
-function Sidebar(props) {
+function Sidebar() {
   return (
     <aside className={classes.sidebar}>
       <div className={classes.menu}>
         <Navigation />
-        <Friends friendsData={props.sidebarData.friends} />
+        <FriendsContainer />
       </div>
     </aside>
   );

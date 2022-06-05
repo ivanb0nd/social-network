@@ -1,7 +1,7 @@
 import classes from './Navigation.module.css';
 import { NavLink } from 'react-router-dom';
 
-function Navigation(props) {
+function Navigation() {
   return (
     <nav>
       <ul className={classes.list}>
