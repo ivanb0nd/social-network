@@ -12,7 +12,7 @@ function MyPosts(props) {
 
   function formingPostText(e) {
     let postText = e.target.value;
-    props.updateNewPostMessage(postText);
+    props.formingPostText(postText);
   }
 
   return (

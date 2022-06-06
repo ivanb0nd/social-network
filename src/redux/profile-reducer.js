@@ -17,7 +17,7 @@ export const profileReducer = (state = initialState, action) => {
 
       if (currentNewPostText === undefined || currentNewPostText === '') {
         alert('Fill the empty field');
-        return;
+        return state;
       }
 
       let newPost = {
