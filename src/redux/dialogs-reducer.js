@@ -18,6 +18,9 @@ let initialState = {
 }
 
 export const dialogsReducer = (state = initialState, action) => {
+
+
+
   switch (action.type) {
     case ADD_DIALOG_MESSAGE: {
       let currentNewMessageText = state.newMessageText.trim();

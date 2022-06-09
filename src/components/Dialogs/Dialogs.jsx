@@ -7,8 +7,8 @@ import React from 'react';
 
 
 function Dialogs(props) {
-  const dialogsElements = props.dialogsData.map(d => <DialogItem name={d.name} id={d.id} image={d.image} />)
-  const messagesElements = props.messagesData.map(m => <Message message={m.message} sender={m.sender} id={m.id} role={m.role} />)
+  const dialogsElements = props.dialogsData.map(d => <DialogItem name={d.name} key={d.id} id={d.id} image={d.image} />)
+  const messagesElements = props.messagesData.map(m => <Message message={m.message} sender={m.sender} key={m.id} id={m.id} role={m.role} />)
 
 
   function sendMessage() {
