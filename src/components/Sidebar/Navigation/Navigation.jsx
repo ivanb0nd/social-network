@@ -20,6 +20,9 @@ function Navigation() {
         <li className={classes.item}>
           <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to={'/settings'}>Settings</NavLink>
         </li>
+        <li className={classes.item}>
+          <NavLink className={(NavData) => NavData.isActive ? classes.active : ''} to={'/users'}>Find Users</NavLink>
+        </li>
       </ul>
     </nav>
   )
