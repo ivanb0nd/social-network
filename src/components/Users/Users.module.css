@@ -1,5 +1,19 @@
 .users {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 2rem;
+}
+
+.selectedPage {
+  font-weight: bold;
+  background: red;
+}
+
+.users_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+
 }
