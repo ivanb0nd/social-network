@@ -21,8 +21,8 @@ const UserCard = (props) => {
           <span className={classes.userCard__status}>{props.status}</span>
         </div>
         <div className={classes.userCard__profile_location}>
-          <span>{'props.country'}</span>
-          <span>{'props.city'}</span>
+          <span>{props.country}</span>
+          <span>{props.city}</span>
         </div>
       </div>
     </div>
