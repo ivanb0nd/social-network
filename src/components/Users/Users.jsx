@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import UserCard from "./UserCard/UserCard";
 import classes from './Users.module.css';
 
