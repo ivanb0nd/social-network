@@ -17,9 +17,9 @@
 }
 
 .item a.active {
-  color: rgb(238, 78, 78);
+  color: var(--main-color);
 }
 
 .item a:hover {
-  background: rgb(212, 212, 212);
+  background: rgb(223, 223, 223);
 }

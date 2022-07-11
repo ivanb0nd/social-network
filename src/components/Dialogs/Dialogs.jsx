@@ -30,7 +30,7 @@ function Dialogs(props) {
           {messagesElements}
         </div>
         <div className={classes.dialogs_input}>
-          <textarea onChange={updateMessage} value={props.newMessageText} placeholder='Type message' rows="1"></textarea>
+          <textarea className={`primary_textarea`} onChange={updateMessage} value={props.newMessageText} placeholder='Type message' rows="1"></textarea>
           <button onClick={sendMessage} className='primary_button'>send</button>
         </div>
       </div>

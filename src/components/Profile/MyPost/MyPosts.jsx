@@ -19,8 +19,8 @@ function MyPosts(props) {
     <div className={classes.posts}>
       <h2 className={classes.posts__header}>My post</h2>
       <form className={classes.form}>
-        <textarea onChange={formingPostText} value={props.newPostText} placeholder='Type your post here' cols="30" rows="7"></textarea>
-        <button type="button" className='primary_button' onClick={addPost}>Add post</button>
+        <textarea className={`primary_textarea`} onChange={formingPostText} value={props.newPostText} placeholder='Type your post here' cols="30" rows="7"></textarea>
+        <button type="button" className={`primary_button ${classes.myPostButton}`} onClick={addPost}>Add post</button>
       </form>
       <div className={classes.posts__list}>
         {postsElements}

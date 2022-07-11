@@ -20,10 +20,13 @@ const UserCard = (props) => {
           <span className={classes.userCard__fullName}>{props.name}</span>
           <span className={classes.userCard__status}>{props.status}</span>
         </div>
-        <div className={classes.userCard__profile_location}>
-          <span>{props.country}</span>
-          <span>{props.city}</span>
-        </div>
+        {props.country || props.city ?
+          <div className={classes.userCard__profile_location}>
+            <span>{props.country}</span>
+            <span>{props.city}</span>
+          </div>
+          : ''}
+
       </div>
     </div>
   )

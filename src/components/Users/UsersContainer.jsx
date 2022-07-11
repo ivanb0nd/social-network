@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import { setCurrentPageAC, setTotalUsersCountAC, setUsersAC, toggleFollowAC } from "../../redux/users-reducer"
+import { nextPageAC, prevPageAC, setCurrentPageAC, setTotalUsersCountAC, setUsersAC, toggleFollowAC } from "../../redux/users-reducer"
 import Users from "./Users"
 import axios from 'axios'
 import React from "react"
@@ -26,6 +26,12 @@ const mapDispatchToProps = (dispatch) => {
     },
     setTotalUsersCount: (totalUsersCount) => {
       dispatch(setTotalUsersCountAC(totalUsersCount))
+    },
+    nextPage: () => {
+      dispatch(nextPageAC())
+    },
+    prevPage: () => {
+      dispatch(prevPageAC())
     }
   }
 }
@@ -50,6 +56,24 @@ class UsersContainer extends React.Component {
       .catch(error => { console.log(error) })
   }
 
+  switchToNextPage = () => {
+    let newPageNumber = this.props.currentPage + 1;
+    this.props.nextPage();
+    axios
+      .get(`https://social-network.samuraijs.com/api/1.0/users?page=${newPageNumber}&count=${this.props.pageSize}`)
+      .then(response => this.props.setUsers(response.data.items))
+      .catch(error => { console.log(error) })
+  }
+
+  switchToPrevPage = () => {
+    let newPageNumber = this.props.currentPage - 1;
+    this.props.prevPage();
+    axios
+      .get(`https://social-network.samuraijs.com/api/1.0/users?page=${newPageNumber}&count=${this.props.pageSize}`)
+      .then(response => this.props.setUsers(response.data.items))
+      .catch(error => { console.log(error) })
+  }
+
   render() {
 
 
@@ -61,6 +85,8 @@ class UsersContainer extends React.Component {
         users={this.props.users}
         onPageChanged={this.onPageChanged}
         follow={this.props.follow}
+        switchToNextPage={this.switchToNextPage}
+        switchToPrevPage={this.switchToPrevPage}
       />
     )
   }

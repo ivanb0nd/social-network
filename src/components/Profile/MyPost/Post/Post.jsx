@@ -9,7 +9,7 @@ function Post(props) {
       </div>
       <div className={classes.likes_section}>
         Likes: <span className={classes.likes_count}>{props.likes}</span>
-        <button className={classes.likes_button}>Like</button>
+        <button className={`primary_button ${classes.likes_button}`}>Like</button>
       </div>
     </div>
   )

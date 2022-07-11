@@ -1,3 +1,11 @@
+:root {
+  --main-color: #6200EE;
+  --main-color-hover: #3700B3; 
+  --main-color-active: #0f0033;
+  --main-background-color: #f3f3f3;
+  --main-elements-border: 1px solid #cccccc;
+}
+
 body, html {
   min-height: 100vh;
 }
@@ -17,8 +25,9 @@ button {
   'header header'
   'sidebar content';
   grid-template-columns: 220px 10fr;
-  grid-template-rows: 100px minmax(calc(100vh - (100px + 1rem)), 1fr);
+  grid-template-rows: auto minmax(calc(100vh - (100px + 1rem)), 1fr);
   gap: 1rem;
+  padding: 0 1rem;
 }
 
 .content {
@@ -26,24 +35,29 @@ button {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   padding: 2rem;
-  background-color: rgb(238, 238, 238);
+  background-color: var(--main-background-color);
   border-radius: 1em;
-  /* overflow-y: scroll; */
 }
 
 .primary_button {
-  align-self: end;
   font-size: 1rem;
-  font-weight: bold;
-  padding: .5em .75em;
-  border-radius: .5rem;
-  background-color: rgb(238, 78, 78);
-  color: white;
+  background-color: var(--main-color);
   border: none;
+  border-radius: 5px;
+  padding: .3rem .6rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color .1s ease-in-out;
+  font-weight: bold;
+  text-align: center;
 }
 
 .primary_button:hover {
-  background-color: rgb(184, 59, 59);
+  background-color: var(--main-color-hover);
+}
+
+.primary_button:active {
+  background-color: var(--main-color-active);
 }
 
 .primary_button:disabled {
@@ -51,14 +65,22 @@ button {
   pointer-events: none;
 }
 
+.primary_textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  flex: 1 1 auto;
+  border: var(--main-elements-border);
+  outline: none;
+  border-radius: 5px;
+  resize: vertical;
+  min-height: 5rem;
+}
 
-
-
-
-
-
-
-
-
-
-
+.primary_input {
+  padding: .5rem;
+  font-size: 1rem;
+  flex: 1 1 auto;
+  border: var(--main-elements-border);
+  outline: none;
+  border-radius: 5px;
+}
