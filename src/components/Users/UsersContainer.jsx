@@ -7,6 +7,7 @@ import Preloader from '../Preloader/Preloader'
 
 const mapStateToProps = (state) => {
   return {
+    state: state,
     users: state.usersPage.users,
     pageSize: state.usersPage.pageSize,
     totalUsersCount: state.usersPage.totalUsersCount,
@@ -17,15 +18,17 @@ const mapStateToProps = (state) => {
 
 class UsersContainer extends React.Component {
   componentDidMount() {
-    this.props.toggleIsFetching(true)
-    axios
-      .get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
-      .then(response => {
-        this.props.setUsers(response.data.items)
-        this.props.setTotalUsersCount(response.data.totalCount)
-        this.props.toggleIsFetching(false)
-      })
-      .catch(error => { console.log(error) })
+    if (this.props.users.length === 0) {
+      this.props.toggleIsFetching(true)
+      axios
+        .get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+        .then(response => {
+          this.props.setUsers(response.data.items)
+          this.props.setTotalUsersCount(response.data.totalCount)
+          this.props.toggleIsFetching(false)
+        })
+        .catch(error => { console.log(error) })
+    }
   }
 
   onPageChanged = (pageNumber) => {

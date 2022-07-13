@@ -27,5 +27,37 @@
 }
 
 .about h2 {
+  margin: 0;
+}
+
+.status {
   margin: 0 0 1rem 0;
+  font-size: .95rem;
+}
+
+.aboutContacts_list {
+  list-style: none;
+}
+
+.aboutContacts_list li {
+  position: relative;
+}
+
+.aboutContacts_list li:before{
+  content: '';
+  width: 9px;
+  height: 9px;
+  background: var(--main-color);
+  position: absolute;
+  left: -22px;
+  top: 10px;
+  border-radius: 50%;
+}
+
+.jobInfo p {
+  margin: 0;
+}
+
+.jobStatus {
+  font-size: .95rem;
 }
