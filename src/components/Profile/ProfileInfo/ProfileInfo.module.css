@@ -1,63 +1,63 @@
 .info {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
+	display: flex;
+	gap: 2rem;
+	margin-bottom: 2rem;
 }
 
 .avatar {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
 }
 
 .avatar img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .about {
-  flex: 1 1 auto;
-  font-size: 1.2rem;
-  background-color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  border: var(--main-elements-border);
+	flex: 1 1 auto;
+	font-size: 1.2rem;
+	background-color: #fff;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	border: var(--main-elements-border);
 }
 
 .about h2 {
-  margin: 0;
+	margin: 0;
 }
 
 .status {
-  margin: 0 0 1rem 0;
-  font-size: .95rem;
+	margin: 0 0 1rem 0;
+	font-size: .95rem;
 }
 
 .aboutContacts_list {
-  list-style: none;
+	list-style: none;
 }
 
 .aboutContacts_list li {
-  position: relative;
+	position: relative;
 }
 
-.aboutContacts_list li:before{
-  content: '';
-  width: 9px;
-  height: 9px;
-  background: var(--main-color);
-  position: absolute;
-  left: -22px;
-  top: 10px;
-  border-radius: 50%;
+.aboutContacts_list li:before {
+	content: '';
+	width: 9px;
+	height: 9px;
+	background: var(--main-color);
+	position: absolute;
+	left: -22px;
+	top: 10px;
+	border-radius: 50%;
 }
 
 .jobInfo p {
-  margin: 0;
+	margin: 0;
 }
 
 .jobStatus {
-  font-size: .95rem;
+	font-size: .95rem;
 }
