@@ -10,8 +10,8 @@ function withRouter(Component) {
 		let location = useLocation();
 		let params = useParams();
 
-		// console.log(location)
-		// console.log(params)
+		console.log(location)
+		console.log(params)
 
 		return (
 			<Component {...props} router={{ location, params }} />
@@ -45,13 +45,6 @@ class ProfileContainer extends React.Component {
 			this.props.setUserProfile(this.props.myProfile)
 			return;
 		}
-
-		axios
-			.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`)
-			.then(response => {
-				this.props.setUserProfile(response.data);
-			})
-			.catch(error => { console.log(error) })
 	}
 
 	render() {
