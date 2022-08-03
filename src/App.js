@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
+import StartingPage from './components/StartingPage/StartingPage';
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 						<Route path="/music" element={<Music />} />
 						<Route path="/settings" element={<Settings />} />
 						<Route path="/users" element={<UsersContainer />} />
+						<Route index element={<StartingPage />} />
 					</Routes>
 				</main>
 			</div>

@@ -24,7 +24,7 @@ let initialState = {
 			"mainLink": null
 		},
 		"lookingForAJob": true,
-		"lookingForAJobDescription": "Пиздец как хочется работу в Айтишечке",
+		"lookingForAJobDescription": "Очень хочется работу в Айтишечке",
 		education: "none",
 		photos: {
 			"small": "https://c.tenor.com/9qZhM0uswAYAAAAd/bully-maguire-dance.gif",
